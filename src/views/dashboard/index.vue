@@ -87,7 +87,7 @@ export default {
   background-color: #d3dce6;
 }
 .el-footer {
-  height: 200px;
+  height: 320px;
   width: 100%;
   display: flex;
   flex: 1;
@@ -118,10 +118,11 @@ export default {
   font-size: 25px;
 }
 .imgstyle{
+  width: 100%;
   max-height: 200px; 
   max-width: 300px;
   border-radius: 10px;
-  margin-left: -2px;
+  margin-left: -1px;
   margin-top: -3px;
 }
 </style>
