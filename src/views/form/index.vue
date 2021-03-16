@@ -1,85 +1,87 @@
 <template>
-  <div class="app-container">
-    <el-form ref="form" :model="form" label-width="120px">
-      <el-form-item label="Activity name">
-        <el-input v-model="form.name" />
-      </el-form-item>
-      <el-form-item label="Activity zone">
-        <el-select v-model="form.region" placeholder="please select your zone">
-          <el-option label="Zone one" value="shanghai" />
-          <el-option label="Zone two" value="beijing" />
-        </el-select>
-      </el-form-item>
-      <el-form-item label="Activity time">
-        <el-col :span="11">
-          <el-date-picker v-model="form.date1" type="date" placeholder="Pick a date" style="width: 100%;" />
-        </el-col>
-        <el-col :span="2" class="line">-</el-col>
-        <el-col :span="11">
-          <el-time-picker v-model="form.date2" type="fixed-time" placeholder="Pick a time" style="width: 100%;" />
-        </el-col>
-      </el-form-item>
-      <el-form-item label="Instant delivery">
-        <el-switch v-model="form.delivery" />
-      </el-form-item>
-      <el-form-item label="Activity type">
-        <el-checkbox-group v-model="form.type">
-          <el-checkbox label="Online activities" name="type" />
-          <el-checkbox label="Promotion activities" name="type" />
-          <el-checkbox label="Offline activities" name="type" />
-          <el-checkbox label="Simple brand exposure" name="type" />
-        </el-checkbox-group>
-      </el-form-item>
-      <el-form-item label="Resources">
-        <el-radio-group v-model="form.resource">
-          <el-radio label="Sponsor" />
-          <el-radio label="Venue" />
-        </el-radio-group>
-      </el-form-item>
-      <el-form-item label="Activity form">
-        <el-input v-model="form.desc" type="textarea" />
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="onSubmit">Create</el-button>
-        <el-button @click="onCancel">Cancel</el-button>
-      </el-form-item>
-    </el-form>
+<div>
+<div class="top">
+  <img src="@/assets/imagebox/10.jpg" alt="">
+</div>
+  <div class="container">
+    <div class="land" @click="Toland">
+      <img class="imgstyle" src="@/assets/imagebox/6.jpg"  alt="" />
+      <div>土地房屋法律援助</div>
+      <div>价格：289元</div>
+    </div>
+    <div class="marriage" @click="Tomarriage">
+      <img class="imgstyle" src="@/assets/imagebox/8.jpg" alt="" />
+      <div>婚姻类法律援助</div>
+      <div>价格：329元</div>
+    </div>
+    <div class="work" @click="Towork">
+      <img class="imgstyle" src="@/assets/imagebox/7.jpg" alt="" />
+      <div>劳务合同法律援助</div>
+      <div>价格：349元</div>
+    </div>
+        <div class="else" @click="Toelse">
+      <img class="imgstyle" src="@/assets/imagebox/9.jpg" alt="" />
+      <div>其他合同法律援助</div>
+      <div>价格：199元</div>
+    </div>
+  </div>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      form: {
-        name: '',
-        region: '',
-        date1: '',
-        date2: '',
-        delivery: false,
-        type: [],
-        resource: '',
-        desc: ''
-      }
-    }
+    return {};
   },
   methods: {
-    onSubmit() {
-      this.$message('submit!')
+    Toland() {
+      this.$router.push({ path: "/list/land" });
     },
-    onCancel() {
-      this.$message({
-        message: 'cancel!',
-        type: 'warning'
-      })
-    }
-  }
-}
+    Tomarriage() {
+      this.$router.push({ path: "/list/marriage" });
+    },
+    Towork() {
+      this.$router.push({ path: "/list/work" });
+    },
+    Toelse() {
+      this.$router.push({ path: "/list/else" });
+    },
+  },
+};
 </script>
 
 <style scoped>
-.line{
+.top {
   text-align: center;
 }
+.container {
+  margin-top: 50px;
+  margin-right: 150px;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.land,
+.marriage,
+.work,
+.else {
+  width: 300px;
+  height: 220px;
+  border: 3px solid #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.imgstyle {
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 300px;
+  height: 160px;
+  max-width: 300px;
+  max-height: 220px;
+  border-radius: 10px;
+}
 </style>
-
