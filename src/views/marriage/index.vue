@@ -7,7 +7,9 @@
         </div>
         <div class="right">
           <h1>离婚咨询</h1>
-          <div class="tips">您在向律师咨询完相关法律问题后，不必再为后续操作烦恼，我们从解疑答惑到动手执行</div>
+          <div class="tips">
+            您在向律师咨询完相关法律问题后，不必再为后续操作烦恼，我们从解疑答惑到动手执行
+          </div>
           <div class="price">价格：￥329</div>
           <div>
             <el-button type="danger" round>立即咨询</el-button>
@@ -16,8 +18,8 @@
       </div>
     </div>
     <div class="container">
-        <img src="@/assets/imagebox/14.jpg" alt="">
-        <img src="@/assets/imagebox/13.jpg" alt="">
+      <img src="@/assets/imagebox/14.jpg" alt="" />
+      <img src="@/assets/imagebox/15.jpg" alt="" />
     </div>
   </div>
 </template>
@@ -32,9 +34,10 @@
   background-color: #fff;
 }
 .top {
+    margin-top: 30px;
   height: 270px;
-    border: 3px solid black;
-    border-radius: 20px;
+  border: 3px solid black;
+  border-radius: 20px;
 }
 .topbar {
   height: 240px;
@@ -42,27 +45,27 @@
   /* background-color: gray; */
 }
 .imgstyle {
-  width: 350px;
-  height: 220px;
+  width: 360px;
+  height: 250px;
 }
 .left {
   float: left;
 }
 .right {
-    width: 300px;
+  width: 300px;
   height: 240px;
-  float: right;
-  margin-right: 300px;
+  float: left;
+  margin-left: 100px;
 }
-.tips{
-    margin-top: -15px;
-    padding-bottom: 10px;
+.tips {
+  margin-top: -15px;
+  padding-bottom: 10px;
 }
-.price{
-    padding-top: 20px;
-    padding-bottom: 20px;
+.price {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.container{
-    margin-top: 20px;
+.container {
+  margin-top: 20px;
 }
 </style>

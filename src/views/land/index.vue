@@ -16,8 +16,8 @@
       </div>
     </div>
     <div class="container">
-        <img src="@/assets/imagebox/12.jpg" alt="">
-        <img src="@/assets/imagebox/13.jpg" alt="">
+      <img src="@/assets/imagebox/12.jpg" alt="" />
+      <img src="@/assets/imagebox/13.jpg" alt="" />
     </div>
   </div>
 </template>
@@ -32,36 +32,37 @@
   background-color: #fff;
 }
 .top {
+  margin-top: 30px;
   height: 270px;
-    border: 3px solid black;
-    border-radius: 20px;
+  border: 3px solid black;
+  border-radius: 20px;
 }
 .topbar {
-  height: 240px;
+  height: 260px;
   padding: 10px 10px 10px 10px;
   /* background-color: gray; */
 }
 .imgstyle {
-  width: 350px;
-  height: 220px;
+  width: 360px;
+  height: 250px;
 }
 .left {
   float: left;
 }
 .right {
   height: 240px;
-  float: right;
-  margin-right: 400px;
+  float: left;
+  margin-left: 100px;
 }
-.tips{
-    margin-top: -15px;
-    padding-bottom: 10px;
+.tips {
+  margin-top: -15px;
+  padding-bottom: 10px;
 }
-.price{
-    padding-top: 20px;
-    padding-bottom: 20px;
+.price {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.container{
-    margin-top: 20px;
+.container {
+  margin-top: 20px;
 }
 </style>
