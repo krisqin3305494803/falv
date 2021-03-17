@@ -123,6 +123,7 @@ h5 {
 }
 .box4 {
   position: relative;
+  padding-top: 6px;
 }
 .box6 {
   position: absolute;

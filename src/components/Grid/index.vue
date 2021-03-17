@@ -1,6 +1,5 @@
 <template>
-  <div class="contain" @click="childMethod()">
-    <img src="" alt="" />
+  <div class="contain">
     <p>{{ titleName }}</p>
     <p>{{ price }}元</p>
   </div>
@@ -11,26 +10,14 @@ export default {
   props: {
     titleName: String,
     price: Number,
-    src:String,
-    fatherMethod: {
-      type: Function,
-      default: null,
-    },
   },
   name: "Grid",
-  methods: {
-    childMethod() {
-      if (this.fatherMethod) {
-        this.fatherMethod();
-      }
-    },
-  },
 };
 </script>
 
 <style scoped>
 .contain {
-  width: 500px;
+  width: 800px;
   height: 300px;
   border: 3px solid #000;
   margin-top: 20px;
