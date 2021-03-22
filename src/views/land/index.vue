@@ -36,7 +36,7 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button @click="dialogFalse">取 消</el-button>
         <el-button type="primary" @click="dialogTrue">确 定</el-button>
       </div>
     </el-dialog>
@@ -58,6 +58,8 @@ export default {
     handleClose() {
       this.$confirm("确认关闭？")
         .then((_) => {
+                    this.form.name = "";
+          this.form.phone = "";
           this.dialogFormVisible = false;
         })
         .catch((_) => {});
@@ -71,6 +73,11 @@ export default {
           this.dialogFormVisible = false;
         })
         .catch((_) => {});
+    },
+        dialogFalse() {
+      this.form.name = "";
+      this.form.phone = "";
+      this.dialogFormVisible = false;
     },
   },
 };

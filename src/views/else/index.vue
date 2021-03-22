@@ -12,7 +12,9 @@
           </div>
           <div class="price">价格：￥99</div>
           <div>
-            <el-button type="danger" round  @click="dialogFormVisible = true">立即咨询</el-button>
+            <el-button type="danger" round @click="dialogFormVisible = true"
+              >立即咨询</el-button
+            >
           </div>
         </div>
       </div>
@@ -22,7 +24,7 @@
       <img src="@/assets/imagebox/13.jpg" alt="" />
     </div>
 
-        <el-dialog
+    <el-dialog
       title="信息填写"
       :visible.sync="dialogFormVisible"
       :before-close="handleClose"
@@ -36,7 +38,8 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button @click="dialogFalse">取 消</el-button>
+        <!-- <el-button @click="dialogFormVisible = false">取 消</el-button> -->
         <el-button type="primary" @click="dialogTrue">确 定</el-button>
       </div>
     </el-dialog>
@@ -60,18 +63,25 @@ export default {
       this.$confirm("确认关闭？")
         .then((_) => {
           this.dialogFormVisible = false;
+          this.form.name = "";
+          this.form.phone = "";
         })
         .catch((_) => {});
     },
     dialogTrue() {
       this.$confirm("确认提交信息？")
         .then(() => {
-          this.$message.success("稍后我们的律师会联系您")
+          this.$message.success("稍后我们的律师会联系您");
           this.form.name = "";
           this.form.phone = "";
           this.dialogFormVisible = false;
         })
         .catch((_) => {});
+    },
+    dialogFalse() {
+      this.form.name = "";
+      this.form.phone = "";
+      this.dialogFormVisible = false;
     },
   },
 };
