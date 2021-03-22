@@ -104,6 +104,7 @@ export default {
   border: 1px solid black;
   box-shadow: 2px 2px 2px grey;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .box2 {
   padding: 10px;

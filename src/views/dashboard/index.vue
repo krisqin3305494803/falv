@@ -18,14 +18,12 @@
       <div class="one" @click="ToFrom">
         <img class="imgstyle"
           src="@/assets/imagebox/4.jpg"
-          alt="点击此处进入法律咨询"
         />
         <p class="lawer">法律咨询</p>
       </div>
       <div class="two" @click="ToLawer">
         <img class="imgstyle"
           src="@/assets/imagebox/5.jpg"
-          alt="点击此处查看法规大全"
         />
         <p class="rule">精英律师推荐</p>
       </div>
@@ -101,6 +99,7 @@ export default {
   width: 300px;
   height: 260px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .two {
   border:3px solid #000;
@@ -108,6 +107,7 @@ export default {
   width: 300px;
   height: 260px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .lawer {
   text-align: center;
